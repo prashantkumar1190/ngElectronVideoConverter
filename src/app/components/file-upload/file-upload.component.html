@@ -1,0 +1,24 @@
+<div class="file-upload">
+  <ng4-files-click (filesSelect)="filesSelect($event)">
+    <span class="single-file-select" [hidden]="selectedFiles && selectedFiles.files.length > 0">Select Files</span>
+    <span class="add-more-files" *ngIf="selectedFiles && selectedFiles.files.length > 0">Add more files</span>
+  </ng4-files-click>
+  <span *ngIf="selectedFiles">
+    <span *ngFor="let file of selectedFiles.files">
+      <span class="files">{{file.name}}</span>
+    </span>
+  </span>
+  <div class="col-md-12 mt-5 pt-3 folder-upload-div" [hidden]="selectedFiles && selectedFiles.files.length > 0">
+    <span class="or-select">or Select</span>
+    <ng4-files-click (filesSelect)="filesSelect($event)">
+      <span class="single-entire-folder">Entire Folder</span>
+    </ng4-files-click>
+  </div>
+
+  <!-- Drop Area -->
+  <!-- <ng4-files-drop (filesSelect)="filesSelect($event)">
+      <div *ngIf="selectedFiles">
+        {{selectedFiles.files}}
+      </div>
+    </ng4-files-drop> -->
+</div>

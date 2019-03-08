@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>NG SPEXT</title>
+  <meta name="description" content="NG SPEXT DESKTOP APP">
+  <meta name="author" content="Prashant Kumar">
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    html,
+    body,
+    .row {
+      height: 100%;
+    }
+
+    /**
+     * Styles to show loading screen until angular  
+     * finishes loading the application
+     */
+    .custom-loader-bg {
+      background: #000;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      overflow: auto;
+      z-index: 1000;
+    }
+
+    .custom-loader-spinner {
+      -webkit-animation: spin 700ms linear infinite;
+      animation: spin 700ms linear infinite;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      border-top-color: #29D;
+      border-left-color: #29D;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-left: -50px;
+      margin-top: -50px;
+      width: 100px;
+      height: 100px;
+      z-index: 1001;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <app-root>
+    <div class="custom-loader-bg"></div>
+    <div class="custom-loader-spinner"></div>
+  </app-root>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+.file-upload {
+  .multi-file-select {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 0.106667px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .single-file-select {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 35px;
+    letter-spacing: 0.106667px;
+    color: #ffffff;
+    width: 360px;
+    height: 111px;
+    background: #18bdc7;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 44px;
+    text-align: center;
+    margin-left: 287px;
+  }
+  .add-more-files {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 35px;
+    letter-spacing: 0.106667px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 300px;
+  }
+  .folder-upload-div {
+    height: 15px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 15px;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0.106667px;
+    color: #ffffff;
+  }
+  .single-entire-folder {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .files {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 0.106667px;
+    color: #18bdc7;
+    display: block;
+    margin-top: 30px;
+  }
+}

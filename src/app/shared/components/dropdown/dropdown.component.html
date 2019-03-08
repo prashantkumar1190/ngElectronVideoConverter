@@ -1,0 +1,36 @@
+<div class="dropdown-container">
+  <!-- Dropdown Button -->
+  <button type="button" class="btn dropdown-button" (click)="toggleSelectDropdown($event)">
+    <span class="btn-text">{{selectedDisplayText}} </span>
+    <span class="icon-angle-down"></span>
+  </button>
+
+  <!-- Dropdown Menu -->
+  <div class="dropdown-list-container" *ngIf="toggleDropdown" [style.maxHeight]="config.height">
+    
+    <!-- Search Input Section -->
+    <div class="search-container" *ngIf="config.search">
+      <input name="search" [(ngModel)]="searchText" />
+      <label [ngClass]="{'active': searchText}">
+        <span class="icon-search"></span> Search</label>
+    </div>
+
+    <!-- Selected items -->
+    <ul class="selected-items">
+      <li tabindex="-1" *ngFor="let selected of selectedItems;let i = index" (click)="deselectItem(selected,i)">
+        <span> {{selected[config.displayKey] || selected}}</span>
+      </li>
+    </ul>
+
+    <!-- Separator -->
+    <hr *ngIf="selectedItems.length > 0 && availableItems.length > 0" />
+
+    <!-- List of items -->
+    <ul class="available-items">
+      <li #availableOption *ngFor="let item of availableItems| filterBy: searchText | limitTo : config.limitTo;let i = index"
+        tabindex="-1" [ngClass]="{'active': focusedItemIndex == i}" (click)="selectItem(item,i)">
+        {{item[config.displayKey] || item}}</li>
+    </ul>
+
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<!-- SPEXT Left icon sextion -->
+<nav class="site-header sticky-top py-1">
+  <img src="assets/images/spext-text.png" alt="SPEXT" class="spext-text">
+  <img src="assets/images/spext-icon.png" alt="SPEXT-icon" class="spext-icon">
+  <img src="assets/images/spext-url.png" alt="www.spext.com" class="spext-url">
+</nav>
+
+<!-- Title and Select Folder -->
+<div class="col-md-12 offset-md-6 top">
+  <div class="spext-media-converter align-center">SPEXT MEDIA CONVERTER</div>
+
+  <div class="col-md-12 mt-5 pt-3 align-center">
+    <span class="separator"></span>
+  </div>
+
+  <div class="col-md-12 mt-5 pt-3">
+    <span class="index-count offset-md-2">1</span>
+    <app-file-upload></app-file-upload>
+  </div>
+</div>
+
+<!-- Output Video Format Button Section -->
+<div class="col-md-12 offset-md-6">
+  <div class="col-md-12 mt-5 pt-3 align-center">
+    <span class="separator"></span>
+  </div>
+
+  <div class="col-md-12 mt-5 pt-3">
+    <span class="index-count offset-md-2">2</span>
+    <span class="index-text offset-md-1">Output Video Format</span>
+  </div>
+
+  <div class="col-md-4 mt-5 pt-3 align-center">
+    <app-dropdown [options]="outputVideoFormatOptions" (change)="onOutputVideoFormatChange($event)"></app-dropdown>
+  </div>
+</div>
+
+<!-- Resolution Button Section -->
+<div class="col-md-12 offset-md-6">
+  <div class="col-md-12 mt-5 pt-3 align-center">
+    <span class="separator"></span>
+  </div>
+
+  <div class="col-md-12 mt-5 pt-3 aling-center">
+    <span class="index-count offset-md-2">3</span>
+    <span class="index-text offset-md-2">Resolution</span>
+  </div>
+
+  <div class="col-md-4 mt-5 pt-3 align-center">
+    <app-dropdown [options]="resolutionOptions" (change)="onResolutionChange($event)"></app-dropdown>
+  </div>
+</div>
+
+<!-- Convert Button -->
+<div class="col-md-12 offset-md-6">
+  <div class="col-md-12 mt-5 pt-3 align-center">
+    <button class="convert-btn" (click)="convert()">
+      <span class="convert-text">Convert</span>
+    </button>
+  </div>
+</div>
+
+<!-- Image guy eating some food -->
+<img src="assets/images/character.png" alt="SPEXT" class="spext-character">

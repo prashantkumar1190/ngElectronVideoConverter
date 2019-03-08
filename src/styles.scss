@@ -1,0 +1,11 @@
+@import './dev_assets/sass/fonts.scss';
+@import './dev_assets/sass/variables.scss';
+body {
+    background-color: $app-background-color;
+}
+
+body {
+    transform: scale(0.5);
+    transform-origin: 0 0;
+}
+

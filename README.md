@@ -1,5 +1,4 @@
-# NG-SPEXT
-Spext media converter electron app.
+# Media converter electron app.
 
 ## System requirements
 
